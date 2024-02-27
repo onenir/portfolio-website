@@ -1,0 +1,324 @@
+.omnie {
+  font-size: 50px;
+  margin: 25px;
+  margin-left: 0px;
+}
+.Bar {
+  font-size: 100%;
+  font-family: "Oswald";
+  color: rgb(240, 196, 77);
+}
+
+a {
+  color: transparent;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "Lato", sans-serif;
+  background-color: #1a1919;
+}
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+.wrapper {
+  max-width: 80vh;
+  margin: 0 auto;
+  background-color: 1a1919;
+  color: rgb(255, 255, 205);
+}
+.left-bar {
+  height: 100vh;
+  float: left;
+  background-color: white;
+}
+.topper {
+  margin: 0;
+  height: 6vh;
+  width: 100%;
+  background-color: white;
+  border: 2px solid #ebe04e;
+  display: flex; /* Dodaj flexbox dla elastycznej przestrzeni */
+}
+.tab {
+  font-size: 15px;
+  flex: 1; /* Elastyczne rozciąganie na całą dostępną przestrzeń */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  letter-spacing: 3px;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: black;
+  color: #ffe75e;
+  transition: background-color 0.3s;
+}
+.tab:hover {
+  background-color: #f3d17c; /* Ciemny kolor żółty po najechaniu kursorem */
+}
+
+.omnietxt {
+  font-size: 40px;
+  width: 100%;
+}
+.about,
+.contactMe {
+  border: #000;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240, 196, 77);
+  border-radius: 10px;
+  padding: 0px;
+  box-sizing: border-box;
+  top: 20%;
+  overflow: hidden;
+  border-bottom: 2px solid #000; /* Dolne obramowanie */
+  border-radius: 0 0 10px 0;
+  border: 2px solid #000; /* Grubość, rodzaj i kolor ramki */
+  padding: 10px; /* Odstęp wewnętrzny wokół zawartości */
+  border-radius: 8px; /* Zaokrąglenie narożników */
+  border: 8px solid #000; /* Grubość, rodzaj i kolor ramki */
+}
+.abtnapis {
+  margin-left: 20px;
+  color: #1a1919;
+  font-family: "Oswald";
+}
+.fota {
+  max-width: 320px;
+  max-height: 320px;
+  width: auto;
+  height: auto;
+  background-image: url("sciezka/do/twojego/obrazka.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -280px;
+  transition: left 0.6s ease; /* Prędkość animacji i efekt ease */
+}
+
+.about:hover .fota {
+  left: 0;
+}
+
+.about::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0); /* Rozpocznij z obramowaniem niewidocznym */
+  transform-origin: bottom right;
+  transition: transform 0.6s ease; /* Zmniejsz prędkość animacji na 0.6s i dodaj efekt "ease" */
+}
+
+.about:hover::after {
+  transform: scaleX(1); /* Po najechaniu myszką, pokaż obramowanie */
+}
+
+.tech {
+  width: 100%;
+  height: 25vh;
+  background-color: black;
+  border-radius: 10px; /* Ustaw zaokrąglenie narożników na 10 pikseli */
+  padding: 10px; /* Opcjonalne - dodaje wewnętrzny odstęp dla zawartości */
+  box-sizing: border-box; /* Opcjonalne - uwzględnia padding w obliczeniach szerokości i wysokości */
+  border: 2px solid #000; /* Grubość, rodzaj i kolor ramki */
+  padding: 10px; /* Odstęp wewnętrzny wokół zawartości */
+  border-radius: 8px; /* Zaokrąglenie narożników */
+  border: 5px solid rgb(240, 196, 77); /* Grubość, rodzaj i kolor ramki */
+}
+.techlogo {
+  width: 100px;
+  height: 100px;
+  margin-left: 60px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  float: left;
+}
+.techlogo:hover {
+  filter: brightness(0.5); /* Zmiana jasności po najechaniu myszą */
+}
+
+.aboutdsc1 {
+  width: 40vh;
+  height: 100%;
+  background-color: #1a1919;
+  border-radius: 10px; /* Ustaw zaokrąglenie narożników na 10 pikseli */
+  padding: 5px; /* Opcjonalne - dodaje wewnętrzny odstęp dla zawartości */
+  box-sizing: border-box; /* Opcjonalne - uwzględnia padding w obliczeniach szerokości i wysokości */
+  float: right;
+  border: 2px solid hsl(19, 72%, 14%);
+  margin-top: 0vh;
+  display: inline-block;
+  margin-top: 10px;
+  border: 4px solid #000; /* Grubość, rodzaj i kolor ramki */
+  color: rgb(238, 213, 69);
+}
+.aboutdsc2 {
+  width: 50vh;
+  height: 100%;
+  background-color: #1a1919;
+  border-radius: 10px; /* Ustaw zaokrąglenie narożników na 10 pikseli */
+  padding: 20px; /* Opcjonalne - dodaje wewnętrzny odstęp dla zawartości */
+  box-sizing: border-box; /* Opcjonalne - uwzględnia padding w obliczeniach szerokości i wysokości */
+  float: right;
+  border: 2px solid hsl(19, 72%, 14%);
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 4px solid #000; /* Grubość, rodzaj i kolor ramki */
+  color: rgb(238, 213, 69);
+}
+.aboutdsc3 {
+  width: 75vh;
+  height: 100%;
+  background-color: #1a1919;
+  border-radius: 10px; /* Ustaw zaokrąglenie narożników na 10 pikseli */
+  padding: 20px; /* Opcjonalne - dodaje wewnętrzny odstęp dla zawartości */
+  box-sizing: border-box; /* Opcjonalne - uwzględnia padding w obliczeniach szerokości i wysokości */
+  margin-top: 0vh;
+  float: right;
+  border: 2px solid hsl(19, 72%, 14%);
+  display: inline-block;
+  border: 4px solid #000; /* Grubość, rodzaj i kolor ramki */
+  color: rgb(238, 213, 69);
+}
+.icon {
+  margin-left: 0.4vh;
+}
+.content {
+  width: 80%;
+  float: left;
+  padding: 20px;
+}
+section {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+.stopka {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  background-color: black;
+  border: 2px solid #ebe04e;
+  text-align: center;
+  bottom: 0;
+  top: 100%;
+  position: sticky;
+}
+.logo {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+.logo:hover {
+  filter: brightness(0.5); /* Zmiana jasności po najechaniu myszą */
+}
+
+.guzik {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px 5px;
+  color: grey;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.guzik:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+body {
+  transition: background-color 0.5s ease; /* Dodaj płynne przejścia */
+  background-color: #272727; /* Domyślny kolor tła strony */
+}
+
+.scroll-background {
+  background-color: rgb(17, 17, 17); /* Kolor tła po przewinięciu */
+}
+.technapis {
+  margin-left: 20px;
+  color: rgb(240, 196, 77);
+  font-family: "Oswald";
+  font-size: 20px;
+}
+
+.contact-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px; /* Ustaw szerokość formularza */
+}
+.emailcont {
+  padding: 20px 15px; /* Dostosuj wartości paddingu w zależności od potrzeb */
+  background-color: #1a1919;
+  height: 5vh;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.contactMe {
+  float: left;
+  position: relative;
+  background-color: rgb(240, 196, 77);
+  padding: 10px; /* Odstęp wewnętrzny wokół zawartości */
+  margin-bottom: 0; /* Usunięcie odstępu pod mailem */
+  height: 60%;
+}
+
+input,
+textarea {
+  height: 10px;
+  float: right;
+  padding: 10px;
+  margin-bottom: 12px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 80%; /* Rozszerz pole na pełną szerokość kontenera */
+  border: 2px solid black;
+}
+textarea:last-of-type {
+  height: 120px; /* Zwiększ wysokość ostatniego pola tekstowego */
+}
+#emailmess {
+  height: 140px;
+  border: 2px solid black;
+}
+button {
+  padding-left: 10px;
+  background-color: rgb(240, 196, 77); /* Nowy kolor tła przycisku */
+  color: #000000; /* Nowy kolor tekstu przycisku */
+  padding: 12px; /* Nowy padding przycisku */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Dodaj płynne przejścia dla zmiany koloru tła */
+  border: 2px solid black;
+}
+
+button:hover {
+  background-color: rgb(
+    253,
+    248,
+    175
+  ); /* Kolor tła przycisku po najechaniu myszą */
+}

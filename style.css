@@ -314,11 +314,3 @@ button {
   transition: background-color 0.3s ease; /* Dodaj płynne przejścia dla zmiany koloru tła */
   border: 2px solid black;
 }
-
-button:hover {
-  background-color: rgb(
-    253,
-    248,
-    175
-  ); /* Kolor tła przycisku po najechaniu myszą */
-}

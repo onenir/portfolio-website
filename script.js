@@ -14,24 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+var calculateBMIButton = document.getElementById("calculateBMIButton");
 
-    // Wysłanie danych do pliku PHP za pomocą AJAX
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "send_email.php", true);
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+// script.js
 
-    var formData = new FormData(this);
+// Pobierz przycisk
+var calculateBMIButton = document.getElementById("calculateBMIButton");
 
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-        // Możesz obsłużyć odpowiedź od serwera tutaj
-        console.log(xhr.responseText);
-      }
-    };
-
-    xhr.send(new URLSearchParams(formData));
-  });
+// Dodaj nasłuchiwanie zdarzenia kliknięcia
+calculateBMIButton.addEventListener("click", function () {
+  // Przekieruj do strony bmicalc.html
+  window.location.href = "bmicalc/bmicalc.html";
+});

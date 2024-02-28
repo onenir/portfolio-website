@@ -1,28 +1,20 @@
-function openFile(fileName) {
-  window.location.href = fileName;
-}
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", function () {
-    var scrollPosition = window.scrollY;
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
 
-    // Dostosuj wartość 200 do swoich preferencji dotyczących odległości przewinięcia
-    if (scrollPosition > 200) {
-      document.body.classList.add("scroll-background");
+    $to = "bartekzieba132@gmail.com"; // Set the recipient email address
+    $subject = "Nowa wiadomość od $name";
+    $headers = "From: $email";
+
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Wiadomość została wysłana pomyślnie!";
     } else {
-      document.body.classList.remove("scroll-background");
+        echo "Wystąpił problem podczas wysyłania wiadomości.";
     }
-  });
-});
-
-var calculateBMIButton = document.getElementById("calculateBMIButton");
-
-// script.js
-
-// Pobierz przycisk
-var calculateBMIButton = document.getElementById("calculateBMIButton");
-
-// Dodaj nasłuchiwanie zdarzenia kliknięcia
-calculateBMIButton.addEventListener("click", function () {
-  // Przekieruj do strony bmicalc.html
-  window.location.href = "bmicalc/bmicalc.html";
-});
+} else {
+    header("HTTP/1.1 403 Forbidden");
+    echo "Nieprawidłowe żądanie";
+}
+?>
